@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://gitlab.cloudoer.io/liuxk/config-center.git
+          search-paths: config
+          username: liuxk@cloudoer.com
+          password: ll5516747
+      label: master
