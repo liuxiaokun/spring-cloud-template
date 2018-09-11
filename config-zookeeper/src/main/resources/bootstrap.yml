@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config-zookeeper
+  cloud:
+    zookeeper:
+      enabled: true
+      connect-string: localhost:2181
+      config:
+        root: /config
+        enabale: true
+        watcher:
+          enable: true
