@@ -2,6 +2,7 @@ package com.cloudoer.config.configzookeeper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,8 +23,16 @@ public class TestController {
     @Autowired
     private User user;
 
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
     @GetMapping("")
     public Object getConfig() {
         return value + " : " + value1 + ":" + user;
+    }
+
+    @GetMapping("jdbc")
+    public Object testJdbc() {
+        return jdbcTemplate.queryForObject("select count(*) from USER", Integer.class);
     }
 }
