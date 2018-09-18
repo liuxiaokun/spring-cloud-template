@@ -10,3 +10,5 @@ spring:
         enabale: true
         watcher:
           enable: true
+  profiles:
+    active: dev
