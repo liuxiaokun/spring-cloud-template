@@ -6,7 +6,7 @@ spring:
       enabled: true
       connect-string: localhost:2181
       config:
-        root: /config
+        root: /config/config-zookeeper
         enabale: true
         watcher:
           enable: true
