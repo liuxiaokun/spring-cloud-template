@@ -19,8 +19,8 @@ public class TestController {
     @Value("${server.port}")
     private String value;
 
-    @Value("${server.port1}")
-    private String value1;
+//    @Value("${server.port1}")
+//    private String value1;
 
     @Autowired
     private User user;
@@ -30,7 +30,7 @@ public class TestController {
 
     @GetMapping("")
     public Object getConfig() {
-        return value + " : " + value1 + ":" + user;
+        return value + " : " + user;
     }
 
     @GetMapping("jdbc")
