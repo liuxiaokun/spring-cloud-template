@@ -13,3 +13,5 @@ eureka:
 spring:
   application:
     name: eureka-server
+logging:
+  file: eureka-server-peer1.log
