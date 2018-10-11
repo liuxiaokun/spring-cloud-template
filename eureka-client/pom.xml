@@ -43,11 +43,6 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.cloudoer.service</groupId>
-            <artifactId>service-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
