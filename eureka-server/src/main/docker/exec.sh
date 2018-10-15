@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #用maven对项目进行打包
 mvn clean package
 # docker.cloudoer.com/eureka-server是build的镜像名字，后面的点别忘了，路径。
