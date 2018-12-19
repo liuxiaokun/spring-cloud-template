@@ -15,3 +15,6 @@ zuul:
     ribbonapi:
       path: /ribbonapi/**
       serviceId: service-ribbon
+    feignapi:
+      path: /feignapi/**
+      serviceId: service-feign

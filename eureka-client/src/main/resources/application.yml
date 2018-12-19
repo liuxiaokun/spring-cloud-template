@@ -7,3 +7,8 @@ eureka:
 spring:
   application:
     name: service-fred
+  security:
+    user:
+      name: fred
+      password: 123
+
