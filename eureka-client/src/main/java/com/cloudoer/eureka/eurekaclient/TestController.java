@@ -1,5 +1,6 @@
 package com.cloudoer.eureka.eurekaclient;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2018/9/10
  */
 @RestController
+@Slf4j
 public class TestController {
 
     @Value("${server.port}")
@@ -18,6 +20,7 @@ public class TestController {
 
     @GetMapping("/hi")
     public String home(@RequestParam String name) {
-        return "hi " + name + ",i am from port:" + port;
+        log.info("eureka client, name:{}, port:{}", name, port);
+        return "eureka client, hi " + name + ",i am from port:" + port;
     }
 }

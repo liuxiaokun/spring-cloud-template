@@ -8,3 +8,5 @@ management:
 spring:
   application:
     name: zip-server
+logging:
+  file: zipkin-server.log
