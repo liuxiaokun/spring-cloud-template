@@ -3,9 +3,13 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.1.109:8761/eureka/
+      defaultZone: http://192.168.1.109:8761/eureka/,http://192.168.1.109:8762/eureka/
     register-with-eureka: true
     fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    ip-address: 192.168.1.109
+    instance-id: http://192.168.1.109:${server.port}
 spring:
   application:
     name: service-fred

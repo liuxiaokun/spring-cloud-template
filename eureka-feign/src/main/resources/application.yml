@@ -1,7 +1,13 @@
 eureka:
+  instance:
+    prefer-ip-address: true
+    ip-address: 192.168.1.109
+    instance-id: http://192.168.1.109:${server.port}
   client:
     serviceUrl:
-      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+      defaultZone: http://192.168.1.109:8761/eureka/,http://192.168.1.109:8762/eureka/
+    fetch-registry: true
+    register-with-eureka: true
 server:
   port: 9070
 spring:
