@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8763
 eureka:
   instance:
     hostname: localhost
@@ -8,3 +8,5 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}
+  server:
+    enable-self-preservation: false
